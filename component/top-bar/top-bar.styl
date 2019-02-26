@@ -1,0 +1,30 @@
+@import "../../app.styl"
+.cp-top-bar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90rpx;
+  z-index: 10;
+  background: #484848;
+  color: white;
+  & > view {
+    text-align: center;
+  }
+  .left, .right {
+    width: 100rpx
+  }
+  .left {
+    font-size: 40rpx;
+  }
+  .title {
+    flex: 1;
+    font-size: 32rpx;
+  }
+  .right{
+    line-height: 90rpx;
+    font-size: 32rpx;
+  }
+}

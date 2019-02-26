@@ -1,0 +1,57 @@
+@import "../../app.styl"
+@import "../../common/stylus/mixin.styl"
+.cp-song-list {
+  position: relative;
+  z-index: 10;
+  scroll-view {
+    background: #343434;
+    .empty {
+      color: white;
+      font-size: $r(32);
+      text-align: center;
+      margin-top: $r(80);
+    }
+  }
+  .select-all {
+    position: fixed;
+    bottom: 0
+    left: 0;
+    right: 0;
+    height: $r(100);
+    line-height: @height;
+    font-size: $r(32);
+    text-align: center;
+    color: white;
+    background: #484848;
+  }
+  .long-press-dialog {
+    position: fixed;
+    z-index: 20;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+    .box {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: $r(400);
+      height: $r(200);
+      background: white;
+      font-size: $r(32);
+      border-radius: 4px;
+      .btn-next {
+        width: 90%;
+        margin-left: 5%;
+        text-align: center;
+        background: #484848
+        color: white;
+        line-height: $r(50);
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<!--component/song-list-item/item.wxml-->
+<view
+  class="cp-song-item left-right {{isSelected && (state === status.select) ?'selected':''}}"
+  bindlongpress="longPressSong"
+  bindtap="tapSong">
+  <view class="left">{{itemIndex}}</view>
+  <view class="right">
+    <view class="song-name ellipse-single {{itemData.payplay ? 'pay-play': ''}}">
+      {{itemData.name}}
+    </view>
+    <view class="singers-name ellipse-single">
+      <text class="singer">{{itemData.singer}}</text>
+      <text class="album" wx:if="{{itemData.album.name}}">《{{itemData.album.name}}》</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+<!--component/top-list-item/item.wxml-->
+<view class="top-item" bindtap="tapTopItem">
+  <view class="left">
+    <image mode="widthFix" src="{{itemData.pic_v12}}"></image>
+  </view>
+  <view class="right">
+    <block wx:for="{{itemData.songlist}}" wx:key="{{index}}">
+      <view class="ellipse-single">{{index+1}}. {{item.singername}} - {{item.songname}}</view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+<!--component/singer-list-item/item.wxml-->
+<view class="singer-list-item" bindtap="tabSingerItem">
+  <view class="left">
+    <image lazy-load="true" src="{{itemData.avatar}}"></image>
+  </view>
+  <view class="right">
+    {{itemData.name}}
+  </view>
+</view>

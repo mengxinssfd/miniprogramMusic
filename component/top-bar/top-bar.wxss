@@ -1,0 +1,65 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+page {
+  background: #343434;
+}
+.under-top {
+  margin-top: 90rpx;
+}
+scroll-view.common-scroll {
+  position: fixed;
+  top: 90rpx;
+  left: 0;
+  right: 0;
+  bottom: 90rpx;
+}
+.left-right {
+  display: flex;
+  align-items: center;
+}
+.left-right .right {
+  flex: 1;
+  overflow: hidden;
+}
+.ellipse-single {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cp-top-bar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90rpx;
+  z-index: 10;
+  background: #484848;
+  color: #fff;
+}
+.cp-top-bar > view {
+  text-align: center;
+}
+.cp-top-bar .left,
+.cp-top-bar .right {
+  width: 100rpx;
+}
+.cp-top-bar .left {
+  font-size: 40rpx;
+}
+.cp-top-bar .title {
+  flex: 1;
+  font-size: 32rpx;
+}
+.cp-top-bar .right {
+  line-height: 90rpx;
+  font-size: 32rpx;
+}

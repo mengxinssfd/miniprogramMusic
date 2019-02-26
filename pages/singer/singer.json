@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "singer-item": "/component/singer-list-item/item"
+  }
+}

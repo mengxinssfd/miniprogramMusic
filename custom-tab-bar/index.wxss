@@ -1,0 +1,24 @@
+.tab-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90rpx;
+  background: #484848;
+  display: flex;
+}
+.tab-bar .tab-bar-item {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+.tab-bar .tab-bar-item.active {
+  color: #ff1c80;
+}
+.tab-bar .tab-bar-item view {
+  font-size: 32rpx;
+}

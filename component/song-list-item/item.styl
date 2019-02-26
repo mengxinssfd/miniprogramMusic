@@ -1,0 +1,24 @@
+@import "../../app.styl"
+.cp-song-item {
+  margin: 20rpx;
+  height: 100rpx;
+  font-size: 32rpx;
+  color: white;
+  &.selected {
+    background: #404040;
+  }
+  .left {
+    margin: 0 20rpx;
+    width: 60rpx;
+    text-align: center;
+  }
+  .right {
+    .pay-play{
+      text-decoration: line-through #ff1c80;
+    }
+    .singers-name {
+      color: #cccccc;
+      font-size: 28rpx;
+    }
+  }
+}

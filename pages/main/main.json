@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "tab-bar": "/custom-tab-bar/index",
+    "bottom-player": "/component/bottom-player/bottom-player",
+    "pg-recmmend": "/pages/recommend/recommend",
+    "pg-top": "/pages/top/top",
+    "pg-singer": "/pages/singer/singer",
+    "song-list": "/component/song-list/song-list",
+    "pg-search": "/pages/search/search"
+  }
+}

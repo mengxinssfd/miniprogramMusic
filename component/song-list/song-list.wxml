@@ -1,0 +1,54 @@
+<!--pages/song-list/songList.wxml-->
+<wxs module="filter" src="../../common/wxs/array.wxs"></wxs>
+<view class="cp-song-list">
+  <top-bar
+    wx:if="{{state === status.common}}"
+    bind:back="tapBack"
+    title="{{title}}"
+  >
+    <view bindtap="tapSelect" wx:if="{{songs.length}}">多选</view>
+  </top-bar>
+  <top-bar
+    wx:else
+    bind:right="tapSelectAll"
+    bind:back="tapCancel"
+    title="选择歌曲"
+  >
+    <view
+      bindtap="tapSelectAll"
+      data-text="{{ selected.length === songs.length ? '取消':'全选'}}"
+    >
+      {{ selected.length === songs.length ? '取消':'全选'}}
+    </view>
+  </top-bar>
+  <scroll-view class="common-scroll" bindscrolltolower="onEnd" scroll-y>
+    <block wx:for="{{songs}}" wx:key="{{index}}">
+      <song-item
+        bind:selected="onSelected"
+        bind:long="onLongPressSong"
+        is-selected="{{filter.includes(selected,index)}}"
+        state="{{state}}" item-data="{{item}}"
+        item-index="{{index+1}}"
+      ></song-item>
+      <!--<view class="test">{{filter.include(selected,index)}}</view>-->
+    </block>
+    <view wx:if="{{!songs.length}}" class="empty">歌曲为空</view>
+  </scroll-view>
+  <view
+    class="select-all"
+    bindtap="tapAddToPlayList"
+    wx:if="{{state === status.select && selected.length}}">
+    添加到播放列表
+  </view>
+  <view
+    class="select-all"
+    bindtap="tapDeleteFromPlayList"
+    wx:if="{{type === 'playList' && state === status.select && selected.length}}">
+    从播放列表中删除
+  </view>
+  <view wx:if="{{showDialog}}" class="long-press-dialog" bindtap="tapMask">
+    <view class="box">
+      <view class="btn-next" bindtap="tapNext">下一首播放</view>
+    </view>
+  </view>
+</view>

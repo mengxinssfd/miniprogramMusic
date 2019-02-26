@@ -1,0 +1,56 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+page {
+  background: #343434;
+}
+.under-top {
+  margin-top: 90rpx;
+}
+scroll-view.common-scroll {
+  position: fixed;
+  top: 90rpx;
+  left: 0;
+  right: 0;
+  bottom: 90rpx;
+}
+.left-right {
+  display: flex;
+  align-items: center;
+}
+.left-right .right {
+  flex: 1;
+  overflow: hidden;
+}
+.ellipse-single {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cp-song-item {
+  margin: 20rpx;
+  height: 100rpx;
+  font-size: 32rpx;
+  color: #fff;
+}
+.cp-song-item.selected {
+  background: #404040;
+}
+.cp-song-item .left {
+  margin: 0 20rpx;
+  width: 60rpx;
+  text-align: center;
+}
+.cp-song-item .right .pay-play {
+  text-decoration: line-through #ff1c80;
+}
+.cp-song-item .right .singers-name {
+  color: #ccc;
+  font-size: 28rpx;
+}

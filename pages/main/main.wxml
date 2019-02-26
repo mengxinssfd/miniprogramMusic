@@ -1,0 +1,25 @@
+<!--pages/main/main.wxml-->
+<view>
+  <!--<tab-bar show="{{!(switch.songList || switch.playList) }}" bind:change="onTabChange"></tab-bar>-->
+  <tab-bar bind:change="onTabChange"></tab-bar>
+  <!--<pg-recmmend show="{{tabIndex === 0}}"></pg-recmmend>-->
+  <pg-singer show="{{tabIndex === 0}}"></pg-singer>
+  <pg-top wx:if="{{switch.top}}" show="{{tabIndex === 1}}"></pg-top>
+  <pg-search wx:if="{{switch.search}}" show="{{tabIndex === 2}}"></pg-search>
+  <song-list
+    wx:if="{{switch.songList}}"
+    songs="{{songs}}"
+    title="{{songListTitle}}"
+    type="{{songListType}}"
+    bind:back="tapSongListBack"
+    bind:end="onEnd"
+  ></song-list>
+  <song-list
+    wx:if="{{switch.playList}}"
+    songs="{{playList}}"
+    title="播放列表"
+    type="playList"
+    bind:back="tapPlayListBack"
+  ></song-list>
+  <bottom-player></bottom-player>
+</view>

@@ -1,0 +1,13 @@
+<!--miniprogram/custom-tab-bar/index.wxml-->
+<view class="cp-tab-bar" style="display: {{show?'block':'none'}};">
+  <view class="tab-bar">
+    <view
+      wx:for="{{list}}"
+      wx:key="index"
+      class="tab-bar-item {{index==selected?'active':''}}"
+      data-index="{{index}}"
+      bindtap="switchTab">
+      <view>{{item.text}}</view>
+    </view>
+  </view>
+</view>

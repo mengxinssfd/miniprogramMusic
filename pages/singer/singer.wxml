@@ -1,0 +1,14 @@
+<!--pages/singer/singer.wxml-->
+<view class="pg-singer under-top"style="display: {{show?'block':'none'}};">
+  <!-- <scroll-view
+     scroll-y
+     bindscrolltoupper="upper"
+     bindscrolltolower="lower"
+     bindscroll="scroll"
+   >-->
+  <scroll-view class="common-scroll" scroll-y>
+    <block wx:for="{{singerList}}" wx:key="{{index}}">
+      <singer-item item-data="{{item}}"></singer-item>
+    </block>
+  </scroll-view>
+</view>

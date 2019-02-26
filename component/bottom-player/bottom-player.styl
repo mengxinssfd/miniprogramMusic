@@ -1,0 +1,34 @@
+@import "../../common/stylus/mixin.styl"
+@import "../../app.styl"
+
+w = $r(70)
+.cp-bottom-player
+  position: fixed
+  bottom: 0
+  left: 0
+  right: 0
+  height: $r(90)
+  background: #484848
+  display: flex
+  align-items: center
+  color: white
+  font-size: $r(28)
+  .left
+    margin: 0 $r(10)
+    width: w
+    height: w
+    image
+      width: 100%
+      height: 100%
+      border-radius: w* .5
+  .center
+    flex: 1
+    overflow: hidden
+  .right
+    image
+      display: inline-block
+      vertical-align: top
+      width: w
+      height: w
+      + image
+        margin-left: $r(20)

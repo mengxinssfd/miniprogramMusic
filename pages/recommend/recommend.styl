@@ -1,0 +1,43 @@
+@import "../../app.styl"
+.tab-rec {
+  .swiper-wrapper {
+    position: relative
+    padding-bottom: 40%;
+    width: 100%;
+    height: 0;
+    swiper {
+      position: absolute
+      top: 0;
+      left: 0
+      width: 100%;
+      height: 100%;
+      swiper-item {
+        width: 100%;
+        height: auto;
+        image {
+          width: 100%;
+        }
+      }
+    }
+    .dots {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      view {
+        display: inline-block;
+        width: w = 10px;
+        height: w;
+        border-radius: w* .5;
+        background: white;
+        transition: width 200ms linear;
+        ~ view {
+          margin-left: 10px;
+        }
+        &.active {
+          width: 20px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<!--pages/top/top.wxml-->
+<view class="pg-top under-top" style="display: {{show?'block':'none'}};">
+  <scroll-view class="common-scroll" scroll-y>
+    <block wx:for="{{topList}}" wx:key="{{index}}">
+      <view class="block">
+        <block
+          wx:for="{{item.List}}"
+          wx:for-item="item2"
+          wx:for-index="index2"
+          wx:key="index2">
+          <top-item item-data="{{item2}}"></top-item>
+          <!--<image mode="widthFix" src="{{item2.pic_v12}}"></image>-->
+        </block>
+      </view>
+    </block>
+  </scroll-view>
+</view>

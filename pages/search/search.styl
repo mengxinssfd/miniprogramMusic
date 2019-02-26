@@ -1,0 +1,97 @@
+@import "../../common/stylus/mixin.styl"
+@import "../../app.styl"
+.pg-search {
+  color: white;
+  .search-box {
+    display: flex;
+    align-items: center;
+    font-size: $r(32);
+    background: #333;
+    margin: 0 $r(20);
+    height: $r(70);
+    .icon-search {
+      margin: 0 $r(10);
+      padding-bottom: $r(10);
+      font-size: $r(50);
+      color: #ff1c80;
+    }
+    .icon-cross {
+      font-size: $r(40);
+      padding: 0 4px;
+      color: #ff1c80;
+    }
+    input {
+      flex: 1;
+    }
+  }
+  .title {
+    margin: $r(20) 0 $r(10);
+    font-size: $r(32);
+    .icon-cross {
+      display: inline-block;
+      float: right;
+      padding: 0 $r(10);
+      font-size: $r(40);
+    }
+  }
+  .hot-key {
+    padding: 10px;
+    box-sizing: border-box;
+    text {
+      display: inline-block;
+      color: #ccc
+      margin: 2px;
+      padding: 0 4px;
+      border: .5px solid #ccc;
+      font-size: $r(28);
+      line-height: $r(38);
+      border-radius: 2px;
+    }
+  }
+  .search-history {
+    padding: 10px;
+    box-sizing: border-box;
+    color: #eeeeee;
+    .history-list {
+      font-size: $r(30);
+      .item {
+        margin: $r(20) 0;
+        .text {
+          color: #ccc;
+        }
+        .icon-cross {
+          display: inline-block;
+          float: right;
+          padding: 0 $r(10);
+          color: red;
+          font-size: $r(40);
+        }
+      }
+    }
+  }
+  scroll-view {
+    top: $r(160);
+    .zhida {
+      padding: 10px;
+      box-sizing: border-box;
+      .left {
+        margin-right: 10px;
+        width: w = 40px;
+        height: w;
+        image {
+          border-radius: w* .5;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .right {
+        font-size: 12px;
+      }
+    }
+    .other {
+      padding: $r(30) 0 $r(60);
+      font-size: $r(32);
+      text-align: center;
+    }
+  }
+}

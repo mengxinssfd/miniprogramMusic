@@ -1,0 +1,32 @@
+.tab-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90rpx;
+  background: #484848;
+  display: flex;
+  //padding-top: env(safe-area-inset-top);
+  .tab-bar-item {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    &.active {
+      color: #ff1c80;
+    }
+    view {
+      font-size: 32rpx;
+    }
+  }
+
+
+}
+
+
+
+
+

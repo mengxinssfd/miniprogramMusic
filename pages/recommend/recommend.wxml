@@ -1,0 +1,22 @@
+<!--pages/recommend/recommend.wxml-->
+<view class="tab-rec under-top" style="display: {{show?'block':'none'}};">
+  <view class="swiper-wrapper">
+    <swiper
+      autoplay="true"
+      circular="true"
+      current="{{current}}"
+      bindchange="onSwiperChange"
+    >
+      <block wx:for="{{slider}}" wx:key="{{item.pickUrl}}">
+        <swiper-item>
+          <image mode="widthFix" src='{{item.picUrl}}'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="dots">
+      <block wx:for="{{slider}}" wx:key="{{item.pickUrl}}">
+        <view bindtap="tapDot" data-index="{{index}}" class="{{current===index?'active':''}}"></view>
+      </block>
+    </view>
+  </view>
+</view>

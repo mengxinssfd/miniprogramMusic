@@ -1,0 +1,8 @@
+<!--component/top-bar/top-bar.wxml-->
+<view class="cp-top-bar">
+  <view class="left" bindtap="tapBack">❮</view>
+  <view class="title ellipse-single" bindtap="tapTitle">{{title}}</view>
+  <view class="right">
+    <slot></slot>
+  </view>
+</view>

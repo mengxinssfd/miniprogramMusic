@@ -1,0 +1,17 @@
+<!--component/bottom-player/bottom-player.wxml-->
+<view class="cp-bottom-player">
+  <view class="left">
+    <image src="{{song.cover}}"></image>
+  </view>
+  <view class="center">
+    <view class="name ellipse-single">{{song.name}}</view>
+    <view class="singer ellipse-single">{{song.singer}}</view>
+  </view>
+  <view class="right">
+    <image bindtap="playPrev" class="img-icon-prev" src="/assets/images/icon-prev.png"></image>
+    <image bindtap="setPlay" wx:if="{{isPlaying}}" class="img-icon-pause" src="/assets/images/icon-pause.png"></image>
+    <image bindtap="setPlay" wx:else class="img-icon-play" src="/assets/images/icon-play.png"></image>
+    <image bindtap="playNext" class="img-icon-next" src="/assets/images/icon-next.png"></image>
+    <image bindtap="tapMenu" class="img-icon-menu" src="/assets/images/icon-menu.png"></image>
+  </view>
+</view>

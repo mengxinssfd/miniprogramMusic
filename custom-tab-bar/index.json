@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "bottom-player": "/component/bottom-player/bottom-player"
+  }
+}

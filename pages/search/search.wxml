@@ -1,0 +1,55 @@
+<!--pages/search/search.wxml-->
+<view class="pg-search under-top" style="display: {{show?'block':'none'}};">
+  <view class="search-box">
+    <view class="icon-search">⌕</view>
+    <input bindinput="bindSearchInput" value="{{searchValue}}" type="text" placeholder="搜索歌曲、歌手"/>
+    <view bindtap="tapSearchClear" wx:if="{{searchValueNotEmpty}}" class="icon-cross">✖</view>
+  </view>
+  <view wx:if="{{!searchValueNotEmpty}}">
+    <view class="hot-key">
+      <view class="title">热门搜索</view>
+      <block wx:for="{{hotKey}}" wx:key="{{index}}">
+        <text bindtap="tapHotKey" data-value="{{item.k}}">{{item.k}}</text>
+      </block>
+    </view>
+    <view class="search-history">
+      <view class="title">
+        搜索历史
+        <text wx:if="{{searchHistory.length > 1}}" bindtap="tapClearHistory" class="icon-cross">✖</text>
+      </view>
+      <view class="history-list">
+        <block wx:for="{{searchHistory}}" wx:key="{{item}}">
+          <view class="item">
+            <text data-text="{{item}}" bindtap="tapHistory" class="text">{{item}}</text>
+            <text data-text="{{item}}" bindtap="tapHistoryDelete" class="icon-cross">✖</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <scroll-view
+    class="common-scroll"
+    bindscrolltolower="onEnd"
+    scroll-y
+    wx:else>
+    <view bindtap="tapSinger" wx:if="{{zhida.singer}}" class="zhida left-right">
+      <view class="left">
+        <image src="{{zhida.singer.avatar}}"></image>
+      </view>
+      <view class="right">
+        <!--<view class="album-name ellipse-single">专辑：《{{zhida.album.albumName}}》</view>-->
+        <view class="singer-name ellipse-single">
+          歌手：{{zhida.singer.name}}
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{songs.length}}">
+      <block wx:for="{{songs}}" wx:key="{{index}}">
+        <song-item item-index="{{index+1}}" item-data="{{item}}"></song-item>
+      </block>
+    </view>
+    <view wx:if="{{!songs.length && !loading}}" class="other empty-result">未搜索到结果</view>
+    <view wx:if="{{loading}}" class="loading other">{{songs.length?"正在加载":"正在搜索"}}......</view>
+    <view wx:if="{{songs.length && hasLoadAll}}" class="other">我是有底线的</view>
+  </scroll-view>
+</view>
